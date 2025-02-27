@@ -1,6 +1,6 @@
 // Удалите импорт React, если он не используется
 // import React from 'react';
-import './loginStyle.css'; // Убедитесь, что путь к файлу стилей правильный
+import '../styles/loginStyle.css'; // Убедитесь, что путь к файлу стилей правильный
 
 function LoginForm() {
     return (
