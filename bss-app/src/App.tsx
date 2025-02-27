@@ -1,7 +1,7 @@
 
 import LoginForm from "./LoginForm.tsx";
 function App(){
-    return <div className={}> <LoginForm/></div>
+    return <div> <LoginForm/></div>
 }
 export default App;
 
