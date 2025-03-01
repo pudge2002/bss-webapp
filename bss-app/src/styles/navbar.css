@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* Стили для навигационной панели */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #024181;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+/* Стили для кнопок в навигационной панели */
+.navbar button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Подчеркивание активной кнопки */
+.navbar button.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    bottom:-10px;
+    height: 7px;
+    font-color: #c800ff;
+    background-color: #ff0000;
+    position: absolute;
+
+    left: 0;
+}
+
+/* Эффект при наведении на кнопку */
+.navbar button:hover {
+    color: rgb(241, 130, 130);
+}

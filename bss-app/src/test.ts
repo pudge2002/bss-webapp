@@ -1,4 +1,4 @@
 function test2(){
-    console.log("tes43424232");
+    console.log(2+"2");
 }
 test2();

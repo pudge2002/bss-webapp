@@ -1,0 +1,10 @@
+.content-container{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+}
+.content-container h1{
+    text-align: center;
+}

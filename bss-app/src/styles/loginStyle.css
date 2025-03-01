@@ -1,21 +1,25 @@
-/* styles.css */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #024181;
+
+.login-form-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*top: 0;*/
+    /*left: 0;*/
+    /*overflow: auto;*/
+    background-image: url("https://severstal.com/upload/iblock/07c/dopkzh39mmzcub30r4xi5m51x274yghq/Mask-Group.jpg");
 }
 
 .login-form {
-    background-color: #003366;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #024181;
     width: 300px;
-    text-align: center;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    margin: -125px 0 0 -125px;
+    padding: 10px 10px 5px 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .login-form div {
@@ -42,6 +46,7 @@ body {
 .login-form input[type="submit"] {
     width: 100%;
     padding: 10px;
+    margin-top: 30px;
     background-color: #ff0033;
     border: none;
     border-radius: 4px;
@@ -54,4 +59,3 @@ body {
 .login-form input[type="submit"]:hover {
     background-color: #c10128;
 }
-
