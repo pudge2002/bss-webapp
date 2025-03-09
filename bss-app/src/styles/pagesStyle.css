@@ -1,10 +1,46 @@
-.content-container{
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -125px 0 0 -125px;
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота окна минус высота navbar */
+    width: 100%;
+    padding-top: 50px; /* Высота navbar */
+    /*background: #c800ff;*/
 }
-.content-container h1{
+
+.content-container {
+    background-color: #dcdcdc;
+    padding: 20px;
+    height: 100%;
+    width: 80%;
+    border-radius: 8px;
     text-align: center;
 }
+.folders {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    background-color: #faf8f8;
+    font-weight: bold;
+    padding: 3px 20px 3px 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.folders p:nth-of-type(2),
+.folders button {
+    margin-left: auto; /* Сдвигает элементы вправо */
+}
+.folders img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5%;
+}
+.folders button {
+background-color: #faf8f8;
+}
+.folders image,
+.folders p,
+.folders button {
+    margin: 0 10px; /* Убираем стандартные отступы и добавляем расстояние между элементами */
+}
+
