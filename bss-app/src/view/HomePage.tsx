@@ -1,19 +1,29 @@
 // HomePage.tsx
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import Navbar from './Navbar';
 import FilesPage from './FilesPage';
 import PlaybackPage from './PlaybackPage';
 import '../styles/pagesStyle.css';
 
+import { fetchFolders } from "../Controllers/controller.ts";
+
 function HomePage() {
     const [activeButton, setActiveButton] = useState<'option1' | 'option2'>('option1');
+    const [folders, setFolders] = useState<{ name: string; date: string }[]>([]);
 
-    // Example data array, replace this with your actual API data
-    const data = [
-        { name: ' 1', date: '2025-09-03' },
-        { name: ' 2', date: '2025-09-03' },
-        { name: ' 3', date: '2025-09-03' }
-    ];
+    useEffect(() => {
+        async function loadFolders() {
+            const data = await fetchFolders();
+            const formattedFolders = data.directories.map(folder => ({
+                name: folder,
+                date: '2025-09-03' // Замените на реальную дату, если она доступна
+            }));
+            setFolders(formattedFolders);
+            console.log('Folders set:', formattedFolders); // Вывод данных в консоль
+        }
+
+        loadFolders();
+    }, []);
 
     const changeTextToOption1 = () => {
         setActiveButton('option1');
@@ -31,7 +41,7 @@ function HomePage() {
                 activeButton={activeButton}
             />
             <div className="content">
-                {activeButton === 'option1' ? <FilesPage data={data} /> : <PlaybackPage />}
+                {activeButton === 'option1' ? <FilesPage data={folders} /> : <PlaybackPage />}
             </div>
         </div>
     );
