@@ -1,0 +1,60 @@
+.content-container {
+    background-color: #ffffff;
+    padding: 20px;
+    height: 100%;
+    width: 80%;
+    border-radius: 8px;
+    text-align: center;
+}
+.folders {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    background-color: #ffffff;
+    font-weight: bold;
+    padding: 3px 20px 3px 20px;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+.folders:hover {
+    /*background-color: #cc1414;*/
+    height: 80px;
+    margin: 10px 0px 10px 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.folders p:nth-of-type(2),
+.folders button {
+    margin-left: auto; /* Сдвигает элементы вправо */
+}
+.folders button {
+    background-image: url("/icons/download-ico.png");
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+    background-color: white;
+}
+.folders button:hover {
+    background-image: url("/icons/download-ico-white.png");
+    background-color: #024181;
+
+}
+.folders img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5%;
+}
+.folders button {
+    background-color: #faf8f8;
+}
+.folders image,
+.folders p,
+.folders button {
+    margin: 0 10px; /* Убираем стандартные отступы и добавляем расстояние между элементами */
+}

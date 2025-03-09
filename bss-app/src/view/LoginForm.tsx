@@ -16,7 +16,7 @@ function LoginForm() {
         if (isLoggedIn) {
             navigate('/home');
         } else {
-            setError('Invalid username or password');
+            setError('Неверный логин или пароль');
         }
     };
 

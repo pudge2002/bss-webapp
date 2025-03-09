@@ -1,9 +1,9 @@
-// HomePage.tsx
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import FilesPage from './FilesPage';
 import PlaybackPage from './PlaybackPage';
 import '../styles/pagesStyle.css';
+import VideoModal from './VideoModal'; // Импортируем компонент модального окна
 
 import { fetchFolders, downloadFile, downloadFolder } from "../Controllers/controller.ts";
 
@@ -11,11 +11,14 @@ function HomePage() {
     const [activeButton, setActiveButton] = useState<'option1' | 'option2'>('option1');
     const [folders, setFolders] = useState<{ name: string; date: string }[]>([]);
     const [files, setFiles] = useState<{ name: string; date: string }[]>([]);
-    const [currentPath, setCurrentPath] = useState('');
+    const [currentPath, setCurrentPath] = useState<string[]>([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentVideoSrc, setCurrentVideoSrc] = useState('');
 
     useEffect(() => {
         async function loadFoldersAndFiles() {
-            const data = await fetchFolders(currentPath);
+            const pathString = currentPath.join('/');
+            const data = await fetchFolders(pathString);
             const formattedFolders = data.directories.map(folder => ({
                 name: folder,
                 date: '2025-09-03' // Замените на реальную дату, если она доступна
@@ -42,14 +45,21 @@ function HomePage() {
     };
 
     const handleFolderClick = (folderName: string) => {
-        const newPath = currentPath ? `${currentPath}/${folderName}` : folderName;
-        setCurrentPath(newPath);
-        console.log('Current path updated to:', newPath); // Вывод данных в консоль
+        setCurrentPath([...currentPath, folderName]);
+        console.log('Current path updated to:', [...currentPath, folderName]); // Вывод данных в консоль
+    };
+
+    const handlePathClick = (index: number) => {
+        if (index === -1) {
+            setCurrentPath([]);
+        } else {
+            setCurrentPath(currentPath.slice(0, index + 1));
+        }
     };
 
     const handleFileDownload = async (fileName: string) => {
         try {
-            const filePath = currentPath ? `${currentPath}/${fileName}` : fileName;
+            const filePath = currentPath.join('/') ? `${currentPath.join('/')}/${fileName}` : fileName;
             const blob = await downloadFile(filePath);
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
@@ -66,7 +76,7 @@ function HomePage() {
 
     const handleFolderDownload = async (folderName: string) => {
         try {
-            const folderPath = currentPath ? `${currentPath}/${folderName}` : folderName;
+            const folderPath = currentPath.join('/') ? `${currentPath.join('/')}/${folderName}` : folderName;
             const blob = await downloadFolder(folderPath);
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
@@ -81,6 +91,18 @@ function HomePage() {
         }
     };
 
+    const handleFileClick = (fileName: string) => {
+        // Здесь вы должны указать путь к видеофайлу
+        const videoSrc = `/path/to/videos/${fileName}`;
+        setCurrentVideoSrc(videoSrc);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setCurrentVideoSrc('');
+    };
+
     return (
         <div>
             <Navbar
@@ -93,14 +115,18 @@ function HomePage() {
                     <FilesPage
                         folders={folders}
                         files={files}
+                        path={currentPath}
                         onFolderClick={handleFolderClick}
                         onFileDownload={handleFileDownload}
                         onFolderDownload={handleFolderDownload}
+                        onPathClick={handlePathClick}
+                        onFileClick={handleFileClick} // Передаем обработчик клика по файлу
                     />
                 ) : (
                     <PlaybackPage />
                 )}
             </div>
+            <VideoModal isOpen={isModalOpen} videoSrc={currentVideoSrc} onClose={closeModal} />
         </div>
     );
 }
