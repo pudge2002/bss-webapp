@@ -139,7 +139,7 @@ export async function downloadFolder(folderPath: string): Promise<Blob> {
     }
 }
 
-export async function playVideo(filePath: string): Promise<void> {
+export async function playVideo(filePath: string): Promise<Blob> {
     try {
         const token = localStorage.getItem('token');
 
@@ -159,16 +159,13 @@ export async function playVideo(filePath: string): Promise<void> {
         }
 
         const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
-        const video = document.createElement('video');
-        video.src = url;
-        video.controls = true;
-        document.body.appendChild(video);
+        return blob;
     } catch (error) {
         console.error('Error playing video:', error);
         throw error;
     }
 }
+
 
 export async function streamCamera(cameraId: number): Promise<void> {
     try {
