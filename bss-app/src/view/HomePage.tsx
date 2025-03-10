@@ -3,9 +3,9 @@ import Navbar from './Navbar';
 import FilesPage from './FilesPage';
 import PlaybackPage from './PlaybackPage';
 import '../styles/pagesStyle.css';
-import VideoModal from './VideoModal'; // Импортируем компонент модального окна
+import VideoModal from './VideoModal';
 
-import { fetchFolders, downloadFile, downloadFolder } from "../Controllers/controller.ts";
+import { fetchFolders, downloadFile, downloadFolder, playVideo } from "../Controllers/controller.ts";
 
 function HomePage() {
     const [activeButton, setActiveButton] = useState<'option1' | 'option2'>('option1');
@@ -91,11 +91,16 @@ function HomePage() {
         }
     };
 
-    const handleFileClick = (fileName: string) => {
-        // Здесь вы должны указать путь к видеофайлу
-        const videoSrc = `/path/to/videos/${fileName}`;
-        setCurrentVideoSrc(videoSrc);
-        setIsModalOpen(true);
+    const handleFileClick = async (fileName: string) => {
+        const filePath = currentPath.join('/') ? `${currentPath.join('/')}/${fileName}` : fileName;
+        try {
+            const videoBlob = await playVideo(filePath);
+            const videoUrl = URL.createObjectURL(videoBlob);
+            setCurrentVideoSrc(videoUrl);
+            setIsModalOpen(true);
+        } catch (error) {
+            console.error('Error playing video:', error);
+        }
     };
 
     const closeModal = () => {

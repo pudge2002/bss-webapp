@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/filesPageStyle.css';
+import VideoModal from './VideoModal'; // Импортируем компонент модального окна
 
 interface FilesPageProps {
     folders: { name: string; date: string }[];
