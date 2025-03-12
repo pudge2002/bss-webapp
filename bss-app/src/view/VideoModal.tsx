@@ -1,5 +1,6 @@
 import React from 'react';
-import "../styles/videoModalStyle.css"
+import '../styles/videoModalStyle.css';
+
 interface VideoModalProps {
     isOpen: boolean;
     videoSrc: string;
@@ -14,6 +15,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, videoSrc, onClose }) =>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="close-button" onClick={onClose}>Close</button>
                 <video width="640" height="500" controls>
+                    <source src={videoSrc} type="video/vnd.avi" />
                     <source src={videoSrc} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
