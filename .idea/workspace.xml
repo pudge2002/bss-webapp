@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e99e8f97-b805-4f7c-adfe-3a0aa5e5341d" name="Changes" comment="добавтл выбор камер на странице с воспроизведением">
+    <list default="true" id="e99e8f97-b805-4f7c-adfe-3a0aa5e5341d" name="Changes" comment="локальное сохранение выбранных камер">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/src/view/PlaybackPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/view/PlaybackPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,25 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.controller.ts.executor": "Run",
-    "Node.js.test.ts.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/git/bss-webapp",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.TypeScript",
-    "ts.external.directory.path": "C:\\Users\\MAXIM\\Desktop\\ЧГУ\\Проект\\Проект лвл 2\\Репозитории\\Клиент\\bss-webapp\\bss-app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.controller.ts.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.ts.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/git/bss-webapp&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\MAXIM\\Desktop\\ЧГУ\\Проект\\Проект лвл 2\\Репозитории\\Клиент\\bss-webapp\\bss-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\git\bss-webapp\bss-app\src\view" />
@@ -87,7 +86,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
       </set>
     </attachedChunks>
   </component>
@@ -117,6 +116,7 @@
       <workItem from="1741507448973" duration="4541000" />
       <workItem from="1741604441361" duration="8127000" />
       <workItem from="1741800680606" duration="1529000" />
+      <workItem from="1741870677969" duration="330000" />
     </task>
     <task id="LOCAL-00001" summary="добавтл выбор камер на странице с воспроизведением">
       <option name="closed" value="true" />
@@ -126,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741856164075</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="локальное сохранение выбранных камер">
+      <option name="closed" value="true" />
+      <created>1741857429674</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741857429674</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +153,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавтл выбор камер на странице с воспроизведением" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавтл выбор камер на странице с воспроизведением" />
+    <MESSAGE value="локальное сохранение выбранных камер" />
+    <option name="LAST_COMMIT_MESSAGE" value="локальное сохранение выбранных камер" />
   </component>
 </project>
