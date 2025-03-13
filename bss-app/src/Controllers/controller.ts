@@ -12,12 +12,9 @@ export async function checkLogin(username: string, password: string): Promise<bo
 
         if (response.ok) {
             const data = await response.json();
-            // Если сервер вернул токен, значит логин успешен
             const token = data.token;
-
             localStorage.setItem('token', token);
-
-            return true // Предполагается, что сервер возвращает объект с полем success
+            return true;
         } else {
             throw new Error('Failed to login');
         }
@@ -31,14 +28,12 @@ export async function checkLogin(username: string, password: string): Promise<bo
 export async function ShowCameras() {
     try {
         const token = localStorage.getItem('token');
-
         if (!token) {
             throw new Error('No token provided');
-            return [];
         }
 
         const response = await fetch(`${API_URL}/api/Cameras`, {
-            method: 'GET', // Указываем метод запроса
+            method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
@@ -59,7 +54,6 @@ export async function ShowCameras() {
 export async function fetchFolders(path: string = ''): Promise<{ directories: string[], files: string[] }> {
     try {
         const token = localStorage.getItem('token');
-
         if (!token) {
             throw new Error('No token provided');
         }
@@ -88,7 +82,6 @@ export async function fetchFolders(path: string = ''): Promise<{ directories: st
 export async function downloadFile(filePath: string): Promise<Blob> {
     try {
         const token = localStorage.getItem('token');
-
         if (!token) {
             throw new Error('No token provided');
         }
@@ -115,7 +108,6 @@ export async function downloadFile(filePath: string): Promise<Blob> {
 export async function downloadFolder(folderPath: string): Promise<Blob> {
     try {
         const token = localStorage.getItem('token');
-
         if (!token) {
             throw new Error('No token provided');
         }
@@ -142,7 +134,6 @@ export async function downloadFolder(folderPath: string): Promise<Blob> {
 export async function playVideo(filePath: string): Promise<Blob> {
     try {
         const token = localStorage.getItem('token');
-
         if (!token) {
             throw new Error('No token provided');
         }
@@ -166,11 +157,9 @@ export async function playVideo(filePath: string): Promise<Blob> {
     }
 }
 
-
 export async function streamCamera(cameraId: number): Promise<void> {
     try {
         const token = localStorage.getItem('token');
-
         if (!token) {
             throw new Error('No token provided');
         }

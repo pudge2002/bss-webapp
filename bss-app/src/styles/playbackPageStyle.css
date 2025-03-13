@@ -28,3 +28,19 @@
 .output-video{
     background-color: white;
 }
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.video-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}

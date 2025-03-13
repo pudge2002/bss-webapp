@@ -7,11 +7,9 @@
     <list default="true" id="e99e8f97-b805-4f7c-adfe-3a0aa5e5341d" name="Changes" comment="+API заросы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bss-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bss-app/src/Controllers/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/Controllers/controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/src/view/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/view/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bss-app/src/styles/playbackPageStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/styles/playbackPageStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bss-app/src/view/PlaybackPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/view/PlaybackPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +52,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.controller.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.test.ts.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/git/bss-webapp&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;F:\\git\\bss-webapp\\bss-app\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.controller.ts.executor": "Run",
+    "Node.js.test.ts.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/git/bss-webapp",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.TypeScript",
+    "ts.external.directory.path": "C:\\Users\\MAXIM\\Desktop\\ЧГУ\\Проект\\Проект лвл 2\\Репозитории\\Клиент\\bss-webapp\\bss-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\git\bss-webapp\bss-app\src\view" />
