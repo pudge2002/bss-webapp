@@ -13,14 +13,23 @@ const PlaybackPage: React.FC = () => {
         };
 
         fetchCameras();
+
+        // Load selected cameras from localStorage
+        const savedCameras = JSON.parse(localStorage.getItem('selectedCameras')) || [];
+        setSelectedCameras(savedCameras);
     }, []);
 
     const handleCheckboxChange = (cameraId: number) => {
-        setSelectedCameras(prevSelected =>
-            prevSelected.includes(cameraId)
+        setSelectedCameras(prevSelected => {
+            const newSelected = prevSelected.includes(cameraId)
                 ? prevSelected.filter(id => id !== cameraId)
-                : [...prevSelected, cameraId]
-        );
+                : [...prevSelected, cameraId];
+
+            // Save selected cameras to localStorage
+            localStorage.setItem('selectedCameras', JSON.stringify(newSelected));
+
+            return newSelected;
+        });
     };
 
     useEffect(() => {
