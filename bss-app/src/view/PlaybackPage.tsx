@@ -10,13 +10,22 @@ const PlaybackPage: React.FC = () => {
         const fetchCameras = async () => {
             const cameras = await ShowCameras();
             setCameras(cameras);
+
+            // Load selected cameras from localStorage
+            const savedCameras = JSON.parse(localStorage.getItem('selectedCameras')) || [];
+
+            // Filter out cameras that are no longer in the database
+            const validSelectedCameras = savedCameras.filter(cameraId =>
+                cameras.some(camera => camera.id === cameraId)
+            );
+
+            // Save the filtered selected cameras back to localStorage
+            localStorage.setItem('selectedCameras', JSON.stringify(validSelectedCameras));
+
+            setSelectedCameras(validSelectedCameras);
         };
 
         fetchCameras();
-
-        // Load selected cameras from localStorage
-        const savedCameras = JSON.parse(localStorage.getItem('selectedCameras')) || [];
-        setSelectedCameras(savedCameras);
     }, []);
 
     const handleCheckboxChange = (cameraId: number) => {
