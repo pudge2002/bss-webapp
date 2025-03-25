@@ -65,13 +65,16 @@ const PlaybackPage: React.FC = () => {
                 <div className="video-grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${getGridColumns()}, 1fr)`, gap: '10px' }}>
                     {selectedCameras.map(cameraId => {
                         const camera = cameras.find(cam => cam.id === cameraId);
+                        if (!camera) return null; // Skip rendering if the camera is not found in the current list
                         return (
                             <div key={cameraId} className="video-container">
                                 <video
+                                    id={`cameraStream_${cameraId}`}
                                     className="output-video"
                                     width="100%"
                                     height="auto"
                                     controls
+                                    autoPlay
                                 ></video>
                                 <div className="video-label">{camera ? camera.name || `Камера ${camera.id}` : `Камера ${cameraId}`}</div>
                             </div>

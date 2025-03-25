@@ -1,3 +1,5 @@
+import Hls from 'hls.js';
+
 export const API_URL = 'https://localhost:7181';
 
 export async function checkLogin(username: string, password: string): Promise<boolean> {
@@ -175,23 +177,23 @@ export async function playVideo(filePath: string): Promise<Blob> {
 }
 
 export async function streamCamera(cameraId: number): Promise<void> {
-    try {
-        const response = await fetchWithAuth(`${API_URL}/api/Cameras/stream/${cameraId}`, {
-            method: 'GET',
+    const videoElement = document.getElementById(`cameraStream_${cameraId}`) as HTMLVideoElement;
+    if (!videoElement) return;
+
+    const hlsUrl = `http://localhost:8888/camera_${cameraId}/index.m3u8`;
+
+    if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(hlsUrl);
+        hls.attachMedia(videoElement);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            videoElement.play();
         });
-
-        if (!response.ok) {
-            throw new Error('Ошибка при стриминге камеры');
-        }
-
-        const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
-        const video = document.createElement('video');
-        video.src = url;
-        video.controls = true;
-        document.body.appendChild(video);
-    } catch (error) {
-        console.error('Error streaming camera:', error);
-        throw error;
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Поддержка HLS в Safari
+        videoElement.src = hlsUrl;
+        videoElement.addEventListener('loadedmetadata', () => {
+            videoElement.play();
+        });
     }
 }
