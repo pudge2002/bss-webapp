@@ -13,17 +13,17 @@
     height: 100%;
     width: 20%;
     margin-right: auto;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
 .showingCam{
-    background-color: #9a9a9a;
+    background-color: #ffffff;
     height: 100%;
     width: 100%;
     margin-right: auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-left: 10px;
-    border-radius: 10px;
+    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);*/
+    margin-left: 20px;
+    /*border-radius: 10px;*/
 }
 .output-video{
     background-color: white;
