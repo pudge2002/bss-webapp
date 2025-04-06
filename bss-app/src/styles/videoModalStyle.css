@@ -25,11 +25,22 @@
 }
 
 .close-button {
+    background-image: url("/icons/close-ico.png");
+    background-size: cover;
     position: absolute;
+    border-radius: 5px;
     top: 10px;
     right: 10px;
-    background: transparent;
+    width: 25px;
+    height: 25px;
+    background-color: white;
     border: none;
     font-size: 16px;
     cursor: pointer;
+}
+.close-button:hover {
+    background-image: url("/icons/close-hover-ico.png");
+    background-color: red;
+
+
 }

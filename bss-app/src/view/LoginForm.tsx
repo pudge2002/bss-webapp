@@ -32,7 +32,7 @@ function LoginForm() {
                     <input type="password" id="pass" name="password" required />
                 </div>
                 {error && <div className="error-message">{error}</div>}
-                <input type="submit" value="Sign in" />
+                <input type="submit" value="Войти" />
             </form>
         </div>
     );

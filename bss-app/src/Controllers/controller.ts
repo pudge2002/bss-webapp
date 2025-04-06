@@ -28,6 +28,11 @@ export async function checkLogin(username: string, password: string): Promise<bo
         return false;
     }
 }
+export async function  clearTokens(): Promise<boolean> {
+    localStorage.removeItem('token');
+    localStorage.removeItem('refreshToken');
+    return true;
+}
 
 async function refreshToken() {
     const refreshToken = localStorage.getItem('refreshToken');

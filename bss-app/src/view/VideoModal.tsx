@@ -13,7 +13,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, videoSrc, onClose }) =>
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="close-button" onClick={onClose}>Close</button>
+                <button className="close-button" onClick={onClose}></button>
                 <video width="640" height="500" controls>
                     <source src={videoSrc} type="video/vnd.avi" />
                     <source src={videoSrc} type="video/mp4" />

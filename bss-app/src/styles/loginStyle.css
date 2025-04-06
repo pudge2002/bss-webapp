@@ -3,10 +3,19 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    /*top: 0;*/
-    /*left: 0;*/
-    /*overflow: auto;*/
-    background-image: url("https://severstal.com/upload/iblock/07c/dopkzh39mmzcub30r4xi5m51x274yghq/Mask-Group.jpg");
+    background-image: url("/icons/back.jpg");
+    background-size: cover;
+    background-position: left;
+    animation: moveBackground 35s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 14.5%
+    }
 }
 
 .login-form {

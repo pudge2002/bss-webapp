@@ -20,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -124,6 +124,8 @@
       <workItem from="1742907232426" duration="7831000" />
       <workItem from="1743336153325" duration="376000" />
       <workItem from="1743336551537" duration="2354000" />
+      <workItem from="1743527810181" duration="1185000" />
+      <workItem from="1743924887082" duration="13626000" />
     </task>
     <task id="LOCAL-00001" summary="добавтл выбор камер на странице с воспроизведением">
       <option name="closed" value="true" />

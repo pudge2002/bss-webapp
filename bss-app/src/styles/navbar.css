@@ -1,19 +1,25 @@
-/* styles.css */
-
-/* Стили для навигационной панели */
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     background-color: #024181;
     border-bottom: 1px solid #ddd;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
-/* Стили для кнопок в навигационной панели */
+
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
 .navbar button {
     background-color: transparent;
     border: none;
@@ -25,22 +31,38 @@
     cursor: pointer;
     position: relative;
 }
+.navbar button:active {
+    color: red;
+}
 
-/* Подчеркивание активной кнопки */
+
 .navbar button.active::after {
     content: '';
     display: block;
     width: 100%;
-    bottom:-10px;
+    bottom: -10px;
     height: 7px;
-    font-color: #c800ff;
     background-color: #ff0000;
     position: absolute;
-
     left: 0;
 }
 
-/* Эффект при наведении на кнопку */
+
 .navbar button:hover {
     color: rgb(241, 130, 130);
+}
+
+.navbar .exitButton {
+    background-image: url("/icons/exit-ico.png");
+    background-size: contain;
+    background-position: center;
+    width: 40px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.navbar .exitButton:hover {
+    background-image: url("/icons/exit-hover-ico.png");
+
 }
