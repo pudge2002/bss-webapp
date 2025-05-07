@@ -1,10 +1,18 @@
-// import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginForm from './LoginForm';
 import HomePage from './HomePage';
 import ProtectedRoute from './ProtectedRoute';
+import { setApiUrl } from '../Controllers/controller'; // Импортируйте функцию для установки API_URL
 
-function App(){
+
+interface AppProps {
+    config: { API_URL: string };
+}
+
+function App({ config }: AppProps) {
+    // Установите API_URL из конфигурации
+    setApiUrl(config.API_URL);
+
     return (
         <Router>
             <Routes>

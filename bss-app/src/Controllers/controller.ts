@@ -1,7 +1,10 @@
 import Hls from 'hls.js';
 
-export const API_URL = 'https://localhost:7181';
+let API_URL: string;
 
+export const setApiUrl = (url: string) => {
+    API_URL = url;
+};
 export async function checkLogin(username: string, password: string): Promise<boolean> {
     try {
         const response = await fetch(`${API_URL}/api/Users/login`, {

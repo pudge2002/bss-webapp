@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e99e8f97-b805-4f7c-adfe-3a0aa5e5341d" name="Changes" comment="добавил стрим + Фикс бага с удаленными камерами">
+    <list default="true" id="e99e8f97-b805-4f7c-adfe-3a0aa5e5341d" name="Changes" comment="Фикс бага с удаленными камерами 2">
+      <change afterPath="$PROJECT_DIR$/bss-app/public/urlconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bss-app/src/Controllers/urlconfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bss-app/src/Controllers/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/Controllers/controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bss-app/src/view/PlaybackPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/view/PlaybackPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bss-app/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bss-app/src/view/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/bss-app/src/view/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +20,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="package.json" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
@@ -58,7 +61,7 @@
     &quot;Node.js.test.ts.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;unknown&gt;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;F:/git/bss-webapp&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -67,12 +70,14 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;F:\\git\\bss-webapp\\bss-app\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\MAXIM\\Desktop\\ЧГУ\\Проект\\Проект лвл 2\\Репозитории\\Клиент\\bss-webapp\\bss-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MAXIM\Desktop\ЧГУ\Проект\Проект лвл 2\Репозитории\Клиент\bss-webapp\bss-app\src\Controllers" />
+      <recent name="C:\Users\MAXIM\Desktop\ЧГУ\Проект\Проект лвл 2\Репозитории\Клиент\bss-webapp\bss-app\public" />
       <recent name="F:\git\bss-webapp\bss-app\src\view" />
       <recent name="F:\git\bss-webapp\bss-app\src\styles" />
     </key>
@@ -90,7 +95,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
       </set>
     </attachedChunks>
   </component>
@@ -124,8 +129,7 @@
       <workItem from="1742907232426" duration="7831000" />
       <workItem from="1743336153325" duration="376000" />
       <workItem from="1743336551537" duration="2354000" />
-      <workItem from="1743527810181" duration="1185000" />
-      <workItem from="1743924887082" duration="13626000" />
+      <workItem from="1746607975523" duration="4706000" />
     </task>
     <task id="LOCAL-00001" summary="добавтл выбор камер на странице с воспроизведением">
       <option name="closed" value="true" />
